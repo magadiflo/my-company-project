@@ -13,6 +13,7 @@
     <modules>
         <module>shared-library</module>
         <module>console-app</module>
+        <module>desktop-app</module>
     </modules>
 
     <properties>
