@@ -44,3 +44,19 @@ ArtifacId: my-company-project
 2. En el pom.xml del shared-library solo se define el **artifactId**, mientras que los
    valores para su **groupId**, **version**, las hereda del pom padre, ya que cuando creamos el módulo shared-library las definimos
    igual que el de su padre.
+
+## Referenciando el proyecto shared-library en console-app
+- Se necesita acceder al código compartido en el proyecto **shared-library** desde el proyecto **console-app*.
+Para realizarlo, debemos agregar en el pom del proyecto **console-app* la dependencia de **shared-library**
+````
+// En el pom.xml del console-app agregamos la dependencia de shared-library
+<dependencies>
+    <dependency>
+        <groupId>com.magadiflo.my-company-project</groupId>
+        <artifactId>shared-library</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+</dependencies>
+````
+- Recargamos el pom.xml para descargar la depenencia. Ahora ya podemos usar
+el código del shared-library en el console-app.

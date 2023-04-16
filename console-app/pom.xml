@@ -12,4 +12,12 @@
 
     <artifactId>console-app</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.magadiflo.my-company-project</groupId>
+            <artifactId>shared-library</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 </project>
