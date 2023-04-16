@@ -60,3 +60,25 @@ Para realizarlo, debemos agregar en el pom del proyecto **console-app* la depend
 ````
 - Recargamos el pom.xml para descargar la depenencia. Ahora ya podemos usar
 el código del shared-library en el console-app.
+
+## Construyendo un proyecto Multi-Module usando Maven Goal
+Para generar los empaquetados de los proyectos modulares, podemos abrir
+la terminal y ejecutar:
+````
+mvn clean install
+````
+O podemos ir en el ide de IntelliJ IDEA:
+- Clic en la barra derecha **maven** 
+- Clic en el ícono terminal **Execute maven goal**
+- Escribir **mvn clean install**
+
+Como resultado, se construirá el empaquetado de cada proyecto, finalmente 
+se obtendrá un resultado similar a:
+````
+[INFO] my-company-project ................................. SUCCESS [  0.118 s]
+[INFO] shared-library ..................................... SUCCESS [  1.311 s]
+[INFO] console-app ........................................ SUCCESS [  0.215 s]
+[INFO] desktop-app ........................................ SUCCESS [  0.227 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+````
