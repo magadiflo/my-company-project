@@ -23,3 +23,24 @@ ArtifacId: my-company-project
   ````   
   <packaging>pom</packaging>
   ````
+## Creando el primer módulo para el proyecto shared-library
+- Clic derecho en el proyecto padre **my-company-project/New/Module...**
+- En la ventana que se abre, completamos:
+  ````
+  Name: shared-library
+  Location: lo dejamos tal cual
+  Languaje: Java
+  Build system: Maven
+  JDK: 17
+  Parent: my-company-project <---- seleccioamos nuestro proyecto padre
+  GroupId: lo dejamos tal cual
+  ArtifactId: shared-library <--- es el mismo nombre del proyecto
+  ````
+- Clic en create
+
+## Modificaciones luego de haber creado el módulo shared-library
+1. Como el proyecto shared-library es un módulo de my-company-project, entonces hereda las configuraciones realizadas en el pom.xml de su padre,
+   por lo tanto, las properties creadas automáticamente las eliminamos puesto que el pom.xml del padre ya las tiene.
+2. En el pom.xml del shared-library solo se define el **artifactId**, mientras que los
+   valores para su **groupId**, **version**, las hereda del pom padre, ya que cuando creamos el módulo shared-library las definimos
+   igual que el de su padre.
